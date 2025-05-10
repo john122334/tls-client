@@ -77,24 +77,25 @@ var MappedTLSClients = map[string]ClientProfile{
 }
 
 type ClientProfile struct {
-	clientHelloId     tls.ClientHelloID
-	headerPriority    *http2.PriorityParam
-	settings          map[http2.SettingID]uint32
-	priorities        []http2.Priority
-	pseudoHeaderOrder []string
-	settingsOrder     []http2.SettingID
-	connectionFlow    uint32
+	ClientHelloId      tls.ClientHelloID
+	HeaderPriority     *http2.PriorityParam
+	Settings           map[http2.SettingID]uint32
+	Priorities         []http2.Priority
+	PseudoHeaderOrder  []string
+	SettingsOrder      []http2.SettingID
+	ConnectionFlow     uint32
 }
+
 
 func NewClientProfile(clientHelloId tls.ClientHelloID, settings map[http2.SettingID]uint32, settingsOrder []http2.SettingID, pseudoHeaderOrder []string, connectionFlow uint32, priorities []http2.Priority, headerPriority *http2.PriorityParam) ClientProfile {
 	return ClientProfile{
-		clientHelloId:     clientHelloId,
-		settings:          settings,
-		settingsOrder:     settingsOrder,
-		pseudoHeaderOrder: pseudoHeaderOrder,
-		connectionFlow:    connectionFlow,
-		priorities:        priorities,
-		headerPriority:    headerPriority,
+		ClientHelloId:     clientHelloId,
+		Settings:          settings,
+		SettingsOrder:     settingsOrder,
+		PseudoHeaderOrder: pseudoHeaderOrder,
+		ConnectionFlow:    connectionFlow,
+		Priorities:        priorities,
+		HeaderPriority:    headerPriority,
 	}
 }
 
