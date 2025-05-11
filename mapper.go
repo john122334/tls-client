@@ -2,8 +2,8 @@ package tls_client
 
 import (
 	"github.com/bogdanfinn/fhttp/http2"
-	tls "github.com/bogdanfinn/utls"
-	"github.com/bogdanfinn/utls/dicttls"
+	tls "github.com/john122334/utls"
+	"github.com/john122334/utls/dicttls"
 )
 
 var H2SettingsMap = map[string]http2.SettingID{

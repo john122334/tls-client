@@ -1,11 +1,13 @@
-module github.com/bogdanfinn/tls-client
+module github.com/john122334/tls-client
 
 go 1.22.0
 
 require (
 	github.com/bogdanfinn/fhttp v0.5.34
-	github.com/bogdanfinn/utls v1.6.5
+	github.com/john122334/tls-client v1.9.1
+	github.com/john122334/utls v1.6.5
 	github.com/google/uuid v1.6.0
+	github.com/john122334/utls v0.0.0-20250511025004-ec02b87c24ec
 	github.com/stretchr/testify v1.9.0
 	github.com/tam7t/hpkp v0.0.0-20160821193359-2b70b4024ed5
 	golang.org/x/net v0.31.0
@@ -24,6 +26,5 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-// replace github.com/bogdanfinn/utls => ../utls
-
+// replace github.com/john122334/utls => ../utls
 // replace github.com/bogdanfinn/fhttp => ../fhttp
