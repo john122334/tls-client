@@ -12,8 +12,8 @@ import (
 
 	http "github.com/bogdanfinn/fhttp"
 	"github.com/bogdanfinn/fhttp/httputil"
-	"github.com/bogdanfinn/tls-client/bandwidth"
-	"github.com/bogdanfinn/tls-client/profiles"
+	"github.com/john122334/tls-client/bandwidth"
+	"github.com/john122334/tls-client/profiles"
 	"golang.org/x/net/proxy"
 )
 

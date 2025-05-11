@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	http "github.com/bogdanfinn/fhttp"
-	tls "github.com/bogdanfinn/utls"
+	tls "github.com/john122334/utls"
 	"github.com/tam7t/hpkp"
 )
 
