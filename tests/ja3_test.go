@@ -3,11 +3,11 @@ package tests
 import (
 	"testing"
 
-	"github.com/john122334/tls-client/profiles"
-	utls "github.com/john122334/utls"
+	"github.com/bogdanfinn/tls-client/profiles"
+	utls "github.com/bogdanfinn/utls"
 	"github.com/stretchr/testify/assert"
 
-	tls_client "github.com/john122334/tls-client"
+	tls_client "github.com/bogdanfinn/tls-client"
 )
 
 func TestJA3(t *testing.T) {
