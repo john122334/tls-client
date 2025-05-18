@@ -89,7 +89,7 @@ type RequestInput struct {
 // CustomTlsClient contains custom TLS specifications to construct a client from.
 type CustomTlsClient struct {
 	H2Settings                              map[string]uint32     `json:"h2Settings"`
-	HeaderPriority                          *PriorityParam        `json:"headerPriority"`
+	HeaderPriority                          *PriorityParam        `json:"HeaderPriority"`
 	CertCompressionAlgos                    []string              `json:"certCompressionAlgos"`
 	Ja3String                               string                `json:"ja3String"`
 	H2SettingsOrder                         []string              `json:"h2SettingsOrder"`

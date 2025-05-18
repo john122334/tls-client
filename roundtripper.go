@@ -35,11 +35,11 @@ type roundTripper struct {
 	cachedConnections map[string]net.Conn
 	cachedTransports  map[string]http.RoundTripper
 
-	headerPriority      *http2.PriorityParam
+	HeaderPriority      *http2.PriorityParam
 	settings            map[http2.SettingID]uint32
 	transportOptions    *TransportOptions
 	serverNameOverwrite string
-	priorities          []http2.Priority
+	Priorities          []http2.Priority
 	pseudoHeaderOrder   []string
 	settingsOrder       []http2.SettingID
 	sync.Mutex
@@ -199,7 +199,7 @@ func (rt *roundTripper) dialTLS(ctx context.Context, network, addr string) (net.
 			DialTLS:         rt.dialTLSHTTP2,
 			TLSClientConfig: utlsConfig,
 			ConnectionFlow:  rt.connectionFlow,
-			HeaderPriority:  rt.headerPriority,
+			HeaderPriority:  rt.HeaderPriority,
 			IdleConnTimeout: idleConnectionTimeout,
 		}
 
@@ -251,7 +251,7 @@ func (rt *roundTripper) dialTLS(ctx context.Context, network, addr string) (net.
 			t2.SettingsOrder = rt.settingsOrder
 		}
 
-		t2.Priorities = rt.priorities
+		t2.Priorities = rt.Priorities
 
 		t2.PushHandler = &http2.DefaultPushHandler{}
 		rt.cachedTransports[addr] = &t2
@@ -341,8 +341,8 @@ func newRoundTripper(clientProfile profiles.ClientProfile, transportOptions *Tra
 		serverNameOverwrite:         serverNameOverwrite,
 		settings:                    clientProfile.GetSettings(),
 		settingsOrder:               clientProfile.GetSettingsOrder(),
-		priorities:                  clientProfile.GetPriorities(),
-		headerPriority:              clientProfile.GetHeaderPriority(),
+		Priorities:                  clientProfile.GetPriorities(),
+		HeaderPriority:              clientProfile.GetHeaderPriority(),
 		pseudoHeaderOrder:           clientProfile.GetPseudoHeaderOrder(),
 		insecureSkipVerify:          insecureSkipVerify,
 		forceHttp1:                  forceHttp1,

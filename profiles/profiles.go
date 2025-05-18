@@ -100,37 +100,37 @@ func NewClientProfile(clientHelloId tls.ClientHelloID, settings map[http2.Settin
 }
 
 func (c ClientProfile) GetClientHelloSpec() (tls.ClientHelloSpec, error) {
-	return c.clientHelloId.ToSpec()
+	return c.ClientHelloId.ToSpec()
 }
 
 func (c ClientProfile) GetClientHelloStr() string {
-	return c.clientHelloId.Str()
+	return c.ClientHelloId.Str()
 }
 
 func (c ClientProfile) GetSettings() map[http2.SettingID]uint32 {
-	return c.settings
+	return c.Settings
 }
 
 func (c ClientProfile) GetSettingsOrder() []http2.SettingID {
-	return c.settingsOrder
+	return c.SettingsOrder
 }
 
 func (c ClientProfile) GetConnectionFlow() uint32 {
-	return c.connectionFlow
+	return c.ConnectionFlow
 }
 
 func (c ClientProfile) GetPseudoHeaderOrder() []string {
-	return c.pseudoHeaderOrder
+	return c.PseudoHeaderOrder
 }
 
 func (c ClientProfile) GetHeaderPriority() *http2.PriorityParam {
-	return c.headerPriority
+	return c.HeaderPriority
 }
 
 func (c ClientProfile) GetClientHelloId() tls.ClientHelloID {
-	return c.clientHelloId
+	return c.ClientHelloId
 }
 
 func (c ClientProfile) GetPriorities() []http2.Priority {
-	return c.priorities
+	return c.Priorities
 }

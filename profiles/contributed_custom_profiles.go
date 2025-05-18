@@ -8,7 +8,7 @@ import (
 )
 
 var ZalandoAndroidMobile = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "ZalandoAndroidCustom",
 		Version: "1",
 		Seed:    nil,
@@ -76,31 +76,31 @@ var ZalandoAndroidMobile = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      4096,
 		http2.SettingMaxConcurrentStreams: math.MaxUint32,
 		http2.SettingInitialWindowSize:    16777216,
 		http2.SettingMaxFrameSize:         16384,
 		http2.SettingMaxHeaderListSize:    math.MaxUint32,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var ZalandoIosMobile = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "ZalandoIosCustom",
 		Version: "1",
 		Seed:    nil,
@@ -177,31 +177,31 @@ var ZalandoIosMobile = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      4096,
 		http2.SettingMaxConcurrentStreams: 100,
 		http2.SettingInitialWindowSize:    2097152,
 		http2.SettingMaxFrameSize:         16384,
 		http2.SettingMaxHeaderListSize:    math.MaxUint32,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var NikeIosMobile = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "NikeIosCustom",
 		Version: "1",
 		Seed:    nil,
@@ -278,31 +278,31 @@ var NikeIosMobile = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      4096,
 		http2.SettingMaxConcurrentStreams: 100,
 		http2.SettingInitialWindowSize:    2097152,
 		http2.SettingMaxFrameSize:         16384,
 		http2.SettingMaxHeaderListSize:    math.MaxUint32,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var NikeAndroidMobile = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "NikeAndroidCustom",
 		Version: "1",
 		Seed:    nil,
@@ -370,31 +370,31 @@ var NikeAndroidMobile = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      4096,
 		http2.SettingMaxConcurrentStreams: math.MaxUint32,
 		http2.SettingInitialWindowSize:    16777216,
 		http2.SettingMaxFrameSize:         16384,
 		http2.SettingMaxHeaderListSize:    math.MaxUint32,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var CloudflareCustom = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "CloudflareCustom",
 		Version: "1",
 		Seed:    nil,
@@ -421,7 +421,7 @@ var CloudflareCustom = ClientProfile{
 						tls.CurveID(0x0017),
 					}},
 					&tls.SessionTicketExtension{},
-					// due to that we do not care about http2 frame settings
+					// due to that we do not care about http2 frame Settings
 					&tls.ALPNExtension{AlpnProtocols: []string{"http/1.1"}},
 					&tls.GenericExtension{Id: 22}, // encrypt_then_mac
 					&tls.ExtendedMasterSecretExtension{},
@@ -455,32 +455,32 @@ var CloudflareCustom = ClientProfile{
 		},
 	},
 
-	//actually the h2 settings are not relevant, because this client does only support http1
-	settings: map[http2.SettingID]uint32{
+	//actually the h2 Settings are not relevant, because this client does only support http1
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      4096,
 		http2.SettingMaxConcurrentStreams: math.MaxUint32,
 		http2.SettingInitialWindowSize:    16777216,
 		http2.SettingMaxFrameSize:         16384,
 		http2.SettingMaxHeaderListSize:    math.MaxUint32,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var MMSIos = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "MMSIos",
 		Version: "1",
 		Seed:    nil,
@@ -547,7 +547,7 @@ var MMSIos = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      4096,
 		http2.SettingEnablePush:           1,
 		http2.SettingMaxConcurrentStreams: 100,
@@ -555,7 +555,7 @@ var MMSIos = ClientProfile{
 		http2.SettingMaxFrameSize:         16384,
 		http2.SettingMaxHeaderListSize:    math.MaxUint32,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
@@ -563,17 +563,17 @@ var MMSIos = ClientProfile{
 		http2.SettingMaxFrameSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var MeshIos = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "MeshIos",
 		Version: "1",
 		Seed:    nil,
@@ -650,7 +650,7 @@ var MeshIos = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      4096,
 		http2.SettingEnablePush:           1,
 		http2.SettingMaxConcurrentStreams: 100,
@@ -658,7 +658,7 @@ var MeshIos = ClientProfile{
 		http2.SettingMaxFrameSize:         16384,
 		http2.SettingMaxHeaderListSize:    math.MaxUint32,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
@@ -666,17 +666,17 @@ var MeshIos = ClientProfile{
 		http2.SettingMaxFrameSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var MeshAndroid = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "MeshAndroid",
 		Version: "1",
 		Seed:    nil,
@@ -756,29 +756,29 @@ var MeshAndroid = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var MeshIos2 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "MeshIos2",
 		Version: "1",
 		Seed:    nil,
@@ -859,27 +859,27 @@ var MeshIos2 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      4096,
 		http2.SettingMaxConcurrentStreams: 100,
 		http2.SettingInitialWindowSize:    2097152,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var MeshAndroid2 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "MeshAndroid2",
 		Version: "1",
 		Seed:    nil,
@@ -921,7 +921,7 @@ var MeshAndroid2 = ClientProfile{
 						tls.PKCS1WithSHA1,
 					}},
 					&tls.StatusRequestExtension{},
-					// due to that we do not care about http2 frame settings
+					// due to that we do not care about http2 frame Settings
 					&tls.ALPNExtension{AlpnProtocols: []string{"http/1.1"}},
 					&tls.SupportedPointsExtension{SupportedPoints: []uint8{
 						tls.PointFormatUncompressed,
@@ -935,29 +935,29 @@ var MeshAndroid2 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var ConfirmedIos = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "ConfirmedIos",
 		Version: "1",
 		Seed:    nil,
@@ -1034,7 +1034,7 @@ var ConfirmedIos = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      4096,
 		http2.SettingEnablePush:           1,
 		http2.SettingMaxConcurrentStreams: 100,
@@ -1042,7 +1042,7 @@ var ConfirmedIos = ClientProfile{
 		http2.SettingMaxFrameSize:         16384,
 		http2.SettingMaxHeaderListSize:    math.MaxUint32,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
@@ -1050,17 +1050,17 @@ var ConfirmedIos = ClientProfile{
 		http2.SettingMaxFrameSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var ConfirmedAndroid = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "ConfirmedAndroid",
 		Version: "1",
 		Seed:    nil,
@@ -1113,24 +1113,24 @@ var ConfirmedAndroid = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize: 16777216,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 	},
-	headerPriority: &http2.PriorityParam{},
-	pseudoHeaderOrder: []string{
+	HeaderPriority: &http2.PriorityParam{},
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 16711681,
+	ConnectionFlow: 16711681,
 }
 
 var ConfirmedAndroid2 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "ConfirmedAndroid2",
 		Version: "1",
 		Seed:    nil,
@@ -1184,23 +1184,23 @@ var ConfirmedAndroid2 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize: 16777216,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 16711681,
+	ConnectionFlow: 16711681,
 }
 
 var Okhttp4Android13 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "OkHttp4Android13",
 		Version: "4.10.0",
 		Seed:    nil,
@@ -1208,23 +1208,23 @@ var Okhttp4Android13 = ClientProfile{
 			return Okhttp4Android10.GetClientHelloSpec()
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize: 16777216,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 	},
-	headerPriority: &http2.PriorityParam{},
-	pseudoHeaderOrder: []string{
+	HeaderPriority: &http2.PriorityParam{},
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 16711681,
+	ConnectionFlow: 16711681,
 }
 var Okhttp4Android12 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "OkHttp4Android12",
 		Version: "4.10.0",
 		Seed:    nil,
@@ -1232,24 +1232,24 @@ var Okhttp4Android12 = ClientProfile{
 			return Okhttp4Android10.GetClientHelloSpec()
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize: 16777216,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 	},
-	headerPriority: &http2.PriorityParam{},
-	pseudoHeaderOrder: []string{
+	HeaderPriority: &http2.PriorityParam{},
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 16711681,
+	ConnectionFlow: 16711681,
 }
 
 var Okhttp4Android11 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "OkHttp4Android11",
 		Version: "4.10.0",
 		Seed:    nil,
@@ -1257,24 +1257,24 @@ var Okhttp4Android11 = ClientProfile{
 			return Okhttp4Android10.GetClientHelloSpec()
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize: 16777216,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 	},
-	headerPriority: &http2.PriorityParam{},
-	pseudoHeaderOrder: []string{
+	HeaderPriority: &http2.PriorityParam{},
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 16711681,
+	ConnectionFlow: 16711681,
 }
 
 var Okhttp4Android10 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "OkHttp4Android10",
 		Version: "4.10.0",
 		Seed:    nil,
@@ -1341,24 +1341,24 @@ var Okhttp4Android10 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize: 16777216,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 	},
-	headerPriority: &http2.PriorityParam{},
-	pseudoHeaderOrder: []string{
+	HeaderPriority: &http2.PriorityParam{},
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 16711681,
+	ConnectionFlow: 16711681,
 }
 
 var Okhttp4Android9 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "OkHttp4Android9",
 		Version: "4.10.0",
 		Seed:    nil,
@@ -1412,24 +1412,24 @@ var Okhttp4Android9 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize: 16777216,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 	},
-	headerPriority: &http2.PriorityParam{},
-	pseudoHeaderOrder: []string{
+	HeaderPriority: &http2.PriorityParam{},
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 16711681,
+	ConnectionFlow: 16711681,
 }
 
 var Okhttp4Android8 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "OkHttp4Android8",
 		Version: "4.10.0",
 		Seed:    nil,
@@ -1481,24 +1481,24 @@ var Okhttp4Android8 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize: 16777216,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 	},
-	headerPriority: &http2.PriorityParam{},
-	pseudoHeaderOrder: []string{
+	HeaderPriority: &http2.PriorityParam{},
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 16711681,
+	ConnectionFlow: 16711681,
 }
 
 var Okhttp4Android7 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:  "OkHttp4Android7",
 		Version: "4.10.0",
 		Seed:    nil,
@@ -1552,18 +1552,18 @@ var Okhttp4Android7 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize: 16777216,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 	},
-	headerPriority: &http2.PriorityParam{},
-	pseudoHeaderOrder: []string{
+	HeaderPriority: &http2.PriorityParam{},
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 16711681,
+	ConnectionFlow: 16711681,
 }

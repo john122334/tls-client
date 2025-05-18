@@ -279,12 +279,12 @@ func getTlsClient(requestInput RequestInput, sessionId string, withSession bool)
 	clientProfile := profiles.DefaultClientProfile
 
 	if requestInput.CustomTlsClient != nil {
-		clientHelloId, h2Settings, h2SettingsOrder, pseudoHeaderOrder, connectionFlow, priorityFrames, headerPriority, err := getCustomTlsClientProfile(requestInput.CustomTlsClient)
+		clientHelloId, h2Settings, h2SettingsOrder, pseudoHeaderOrder, connectionFlow, priorityFrames, HeaderPriority, err := getCustomTlsClientProfile(requestInput.CustomTlsClient)
 		if err != nil {
 			return nil, fmt.Errorf("can not build http client out of custom tls client information: %w", err)
 		}
 
-		clientProfile = profiles.NewClientProfile(clientHelloId, h2Settings, h2SettingsOrder, pseudoHeaderOrder, connectionFlow, priorityFrames, headerPriority)
+		clientProfile = profiles.NewClientProfile(clientHelloId, h2Settings, h2SettingsOrder, pseudoHeaderOrder, connectionFlow, priorityFrames, HeaderPriority)
 	}
 
 	if tlsClientIdentifier != "" {
@@ -452,10 +452,10 @@ func getCustomTlsClientProfile(customClientDefinition *CustomTlsClient) (tls.Cli
 		})
 	}
 
-	var headerPriority *http2.PriorityParam
+	var HeaderPriority *http2.PriorityParam
 
 	if customClientDefinition.HeaderPriority != nil {
-		headerPriority = &http2.PriorityParam{
+		HeaderPriority = &http2.PriorityParam{
 			StreamDep: customClientDefinition.HeaderPriority.StreamDep,
 			Exclusive: customClientDefinition.HeaderPriority.Exclusive,
 			Weight:    customClientDefinition.HeaderPriority.Weight,
@@ -469,7 +469,7 @@ func getCustomTlsClientProfile(customClientDefinition *CustomTlsClient) (tls.Cli
 		SpecFactory: specFactory,
 	}
 
-	return clientHelloId, resolvedH2Settings, resolvedH2SettingsOrder, pseudoHeaderOrder, connectionFlow, priorityFrames, headerPriority, nil
+	return clientHelloId, resolvedH2Settings, resolvedH2SettingsOrder, pseudoHeaderOrder, connectionFlow, priorityFrames, HeaderPriority, nil
 }
 
 func getTlsClientProfile(tlsClientIdentifier string) profiles.ClientProfile {

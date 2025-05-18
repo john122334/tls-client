@@ -7,7 +7,7 @@ import (
 )
 
 var Firefox_135 = ClientProfile{
-	ClientHelloId: tls.ClientHelloId{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Firefox",
 		RandomExtensionOrder: false,
 		Version:              "135",
@@ -137,7 +137,7 @@ var Firefox_135 = ClientProfile{
 }
 
 var Firefox_133 = ClientProfile{
-	ClientHelloId: tls.ClientHelloId{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Firefox",
 		RandomExtensionOrder: false,
 		Version:              "133",
@@ -266,7 +266,7 @@ var Firefox_133 = ClientProfile{
 }
 
 var Chrome_131_PSK = ClientProfile{
-	ClientHelloId: tls.ClientHelloId{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Chrome",
 		RandomExtensionOrder: false,
 		Version:              "131",
@@ -377,7 +377,7 @@ var Chrome_131_PSK = ClientProfile{
 }
 
 var Chrome_131 = ClientProfile{
-	ClientHelloId: tls.ClientHelloId{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Chrome",
 		RandomExtensionOrder: false,
 		Version:              "131",
@@ -487,7 +487,7 @@ var Chrome_131 = ClientProfile{
 }
 
 var Firefox_132 = ClientProfile{
-	ClientHelloId: tls.ClientHelloId{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Firefox",
 		RandomExtensionOrder: false,
 		Version:              "132",
@@ -618,7 +618,7 @@ var Firefox_132 = ClientProfile{
 }
 
 var Firefox_123 = ClientProfile{
-	ClientHelloId: tls.ClientHelloId{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Firefox",
 		RandomExtensionOrder: false,
 		Version:              "123",
@@ -720,7 +720,7 @@ var Firefox_123 = ClientProfile{
 		":scheme",
 	},
 	ConnectionFlow: 12517377,
-	priorities: []http2.Priority{
+	Priorities: []http2.Priority{
 		{StreamID: 3, PriorityParam: http2.PriorityParam{
 			StreamDep: 0,
 			Exclusive: false,
@@ -752,7 +752,7 @@ var Firefox_123 = ClientProfile{
 			Weight:    240,
 		}},
 	},
-	headerPriority: &http2.PriorityParam{
+	HeaderPriority: &http2.PriorityParam{
 		StreamDep: 13,
 		Exclusive: false,
 		Weight:    41,
@@ -760,7 +760,7 @@ var Firefox_123 = ClientProfile{
 }
 
 var Firefox_120 = ClientProfile{
-	ClientHelloId: tls.ClientHelloId{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Firefox",
 		RandomExtensionOrder: false,
 		Version:              "120",
@@ -858,12 +858,12 @@ var Firefox_120 = ClientProfile{
 		":scheme",
 	},
 	ConnectionFlow: 12517377,
-	headerPriority: &http2.PriorityParam{
+	HeaderPriority: &http2.PriorityParam{
 		StreamDep: 13,
 		Exclusive: false,
 		Weight:    41,
 	},
-	priorities: []http2.Priority{
+	Priorities: []http2.Priority{
 		{StreamID: 3, PriorityParam: http2.PriorityParam{
 			StreamDep: 0,
 			Exclusive: false,

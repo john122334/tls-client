@@ -6,7 +6,7 @@ import (
 )
 
 var Chrome_133_PSK = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Chrome",
 		RandomExtensionOrder: false,
 		Version:              "133",
@@ -95,29 +95,29 @@ var Chrome_133_PSK = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingEnablePush:        0,
 		http2.SettingInitialWindowSize: 6291456,
 		http2.SettingMaxHeaderListSize: 262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_133 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Chrome",
 		RandomExtensionOrder: false,
 		Version:              "133",
@@ -205,29 +205,29 @@ var Chrome_133 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingEnablePush:        0,
 		http2.SettingInitialWindowSize: 6291456,
 		http2.SettingMaxHeaderListSize: 262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_117 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Chrome",
 		RandomExtensionOrder: false,
 		Version:              "117",
@@ -308,29 +308,29 @@ var Chrome_117 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingEnablePush:        0,
 		http2.SettingInitialWindowSize: 6291456,
 		http2.SettingMaxHeaderListSize: 262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_124 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Chrome",
 		RandomExtensionOrder: false,
 		Version:              "124",
@@ -413,29 +413,29 @@ var Chrome_124 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingEnablePush:        0,
 		http2.SettingInitialWindowSize: 6291456,
 		http2.SettingMaxHeaderListSize: 262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_120 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Chrome",
 		RandomExtensionOrder: false,
 		Version:              "120",
@@ -516,380 +516,380 @@ var Chrome_120 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingEnablePush:        0,
 		http2.SettingInitialWindowSize: 6291456,
 		http2.SettingMaxHeaderListSize: 262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_112 = ClientProfile{
-	clientHelloId: tls.HelloChrome_112,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_112,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingEnablePush:           0,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_116_PSK = ClientProfile{
-	clientHelloId: tls.HelloChrome_112_PSK,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_112_PSK,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingEnablePush:           0,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_116_PSK_PQ = ClientProfile{
-	clientHelloId: tls.HelloChrome_115_PQ_PSK,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_115_PQ_PSK,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingEnablePush:           0,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_111 = ClientProfile{
-	clientHelloId: tls.HelloChrome_111,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_111,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingEnablePush:           0,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_110 = ClientProfile{
-	clientHelloId: tls.HelloChrome_110,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_110,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingEnablePush:           0,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_109 = ClientProfile{
-	clientHelloId: tls.HelloChrome_109,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_109,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingEnablePush:           0,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_108 = ClientProfile{
-	clientHelloId: tls.HelloChrome_108,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_108,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingEnablePush:           0,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_107 = ClientProfile{
-	clientHelloId: tls.HelloChrome_107,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_107,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingEnablePush:           0,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_106 = ClientProfile{
-	clientHelloId: tls.HelloChrome_106,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_106,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingEnablePush:           0,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_105 = ClientProfile{
-	clientHelloId: tls.HelloChrome_105,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_105,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_104 = ClientProfile{
-	clientHelloId: tls.HelloChrome_104,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_104,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Chrome_103 = ClientProfile{
-	clientHelloId: tls.HelloChrome_103,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloChrome_103,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Safari_15_6_1 = ClientProfile{
-	clientHelloId: tls.HelloSafari_15_6_1,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloSafari_15_6_1,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize:    4194304,
 		http2.SettingMaxConcurrentStreams: 100,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxConcurrentStreams,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 10485760,
+	ConnectionFlow: 10485760,
 }
 
 var Safari_16_0 = ClientProfile{
-	clientHelloId: tls.HelloSafari_16_0,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloSafari_16_0,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize:    4194304,
 		http2.SettingMaxConcurrentStreams: 100,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxConcurrentStreams,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 10485760,
+	ConnectionFlow: 10485760,
 }
 
 var Safari_Ipad_15_6 = ClientProfile{
-	clientHelloId: tls.HelloIPad_15_6,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloIPad_15_6,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize:    2097152,
 		http2.SettingMaxConcurrentStreams: 100,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxConcurrentStreams,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 10485760,
+	ConnectionFlow: 10485760,
 }
 
 var Safari_IOS_17_0 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "iOS",
 		RandomExtensionOrder: false,
 		Version:              "17.0",
@@ -976,27 +976,27 @@ var Safari_IOS_17_0 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingEnablePush:           0,
 		http2.SettingInitialWindowSize:    2097152,
 		http2.SettingMaxConcurrentStreams: 100,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingEnablePush,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxConcurrentStreams,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 10485760,
+	ConnectionFlow: 10485760,
 }
 
 var Safari_IOS_18_0 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "iOS",
 		RandomExtensionOrder: false,
 		Version:              "18.0",
@@ -1083,88 +1083,88 @@ var Safari_IOS_18_0 = ClientProfile{
 			}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingEnablePush:           0,
 		http2.SettingMaxConcurrentStreams: 100,
 		http2.SettingInitialWindowSize:    2097152,
 		0x8:                               1,
 		0x9:                               1,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingEnablePush,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		0x8,
 		0x9,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":authority",
 		":path",
 	},
-	connectionFlow: 10420225,
+	ConnectionFlow: 10420225,
 }
 
 var Safari_IOS_16_0 = ClientProfile{
-	clientHelloId: tls.HelloIOS_16_0,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloIOS_16_0,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize:    2097152,
 		http2.SettingMaxConcurrentStreams: 100,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxConcurrentStreams,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 10485760,
+	ConnectionFlow: 10485760,
 }
 
 var Safari_IOS_15_5 = ClientProfile{
-	clientHelloId: tls.HelloIOS_15_5,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloIOS_15_5,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize:    2097152,
 		http2.SettingMaxConcurrentStreams: 100,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxConcurrentStreams,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 10485760,
+	ConnectionFlow: 10485760,
 }
 
 var Safari_IOS_15_6 = ClientProfile{
-	clientHelloId: tls.HelloIOS_15_6,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloIOS_15_6,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingInitialWindowSize:    2097152,
 		http2.SettingMaxConcurrentStreams: 100,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxConcurrentStreams,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":scheme",
 		":path",
 		":authority",
 	},
-	connectionFlow: 10485760,
+	ConnectionFlow: 10485760,
 }
 
 var Firefox_117 = ClientProfile{
-	clientHelloId: tls.ClientHelloID{
+	ClientHelloId: tls.ClientHelloID{
 		Client:               "Firefox",
 		RandomExtensionOrder: false,
 		Version:              "117",
@@ -1249,29 +1249,29 @@ var Firefox_117 = ClientProfile{
 				}}, nil
 		},
 	},
-	settings: map[http2.SettingID]uint32{
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingInitialWindowSize: 131072,
 		http2.SettingMaxFrameSize:      16384,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 12517377,
-	headerPriority: &http2.PriorityParam{
+	ConnectionFlow: 12517377,
+	HeaderPriority: &http2.PriorityParam{
 		StreamDep: 13,
 		Exclusive: false,
 		Weight:    41,
 	},
-	priorities: []http2.Priority{
+	Priorities: []http2.Priority{
 		{StreamID: 3, PriorityParam: http2.PriorityParam{
 			StreamDep: 0,
 			Exclusive: false,
@@ -1306,30 +1306,30 @@ var Firefox_117 = ClientProfile{
 }
 
 var Firefox_110 = ClientProfile{
-	clientHelloId: tls.HelloFirefox_110,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloFirefox_110,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingInitialWindowSize: 131072,
 		http2.SettingMaxFrameSize:      16384,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 12517377,
-	headerPriority: &http2.PriorityParam{
+	ConnectionFlow: 12517377,
+	HeaderPriority: &http2.PriorityParam{
 		StreamDep: 13,
 		Exclusive: false,
 		Weight:    41,
 	},
-	priorities: []http2.Priority{
+	Priorities: []http2.Priority{
 		{StreamID: 3, PriorityParam: http2.PriorityParam{
 			StreamDep: 0,
 			Exclusive: false,
@@ -1364,30 +1364,30 @@ var Firefox_110 = ClientProfile{
 }
 
 var Firefox_108 = ClientProfile{
-	clientHelloId: tls.HelloFirefox_108,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloFirefox_108,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingInitialWindowSize: 131072,
 		http2.SettingMaxFrameSize:      16384,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 12517377,
-	headerPriority: &http2.PriorityParam{
+	ConnectionFlow: 12517377,
+	HeaderPriority: &http2.PriorityParam{
 		StreamDep: 13,
 		Exclusive: false,
 		Weight:    41,
 	},
-	priorities: []http2.Priority{
+	Priorities: []http2.Priority{
 		{StreamID: 3, PriorityParam: http2.PriorityParam{
 			StreamDep: 0,
 			Exclusive: false,
@@ -1422,30 +1422,30 @@ var Firefox_108 = ClientProfile{
 }
 
 var Firefox_106 = ClientProfile{
-	clientHelloId: tls.HelloFirefox_106,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloFirefox_106,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingInitialWindowSize: 131072,
 		http2.SettingMaxFrameSize:      16384,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 12517377,
-	headerPriority: &http2.PriorityParam{
+	ConnectionFlow: 12517377,
+	HeaderPriority: &http2.PriorityParam{
 		StreamDep: 13,
 		Exclusive: false,
 		Weight:    41,
 	},
-	priorities: []http2.Priority{
+	Priorities: []http2.Priority{
 		{StreamID: 3, PriorityParam: http2.PriorityParam{
 			StreamDep: 0,
 			Exclusive: false,
@@ -1480,30 +1480,30 @@ var Firefox_106 = ClientProfile{
 }
 
 var Firefox_105 = ClientProfile{
-	clientHelloId: tls.HelloFirefox_105,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloFirefox_105,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingInitialWindowSize: 131072,
 		http2.SettingMaxFrameSize:      16384,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 12517377,
-	headerPriority: &http2.PriorityParam{
+	ConnectionFlow: 12517377,
+	HeaderPriority: &http2.PriorityParam{
 		StreamDep: 13,
 		Exclusive: false,
 		Weight:    41,
 	},
-	priorities: []http2.Priority{
+	Priorities: []http2.Priority{
 		{StreamID: 3, PriorityParam: http2.PriorityParam{
 			StreamDep: 0,
 			Exclusive: false,
@@ -1538,30 +1538,30 @@ var Firefox_105 = ClientProfile{
 }
 
 var Firefox_104 = ClientProfile{
-	clientHelloId: tls.HelloFirefox_104,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloFirefox_104,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingInitialWindowSize: 131072,
 		http2.SettingMaxFrameSize:      16384,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 12517377,
-	headerPriority: &http2.PriorityParam{
+	ConnectionFlow: 12517377,
+	HeaderPriority: &http2.PriorityParam{
 		StreamDep: 13,
 		Exclusive: false,
 		Weight:    41,
 	},
-	priorities: []http2.Priority{
+	Priorities: []http2.Priority{
 		{StreamID: 3, PriorityParam: http2.PriorityParam{
 			StreamDep: 0,
 			Exclusive: false,
@@ -1596,30 +1596,30 @@ var Firefox_104 = ClientProfile{
 }
 
 var Firefox_102 = ClientProfile{
-	clientHelloId: tls.HelloFirefox_102,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloFirefox_102,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:   65536,
 		http2.SettingInitialWindowSize: 131072,
 		http2.SettingMaxFrameSize:      16384,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxFrameSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":path",
 		":authority",
 		":scheme",
 	},
-	connectionFlow: 12517377,
-	headerPriority: &http2.PriorityParam{
+	ConnectionFlow: 12517377,
+	HeaderPriority: &http2.PriorityParam{
 		StreamDep: 13,
 		Exclusive: false,
 		Weight:    41,
 	},
-	priorities: []http2.Priority{
+	Priorities: []http2.Priority{
 		{StreamID: 3, PriorityParam: http2.PriorityParam{
 			StreamDep: 0,
 			Exclusive: false,
@@ -1654,70 +1654,70 @@ var Firefox_102 = ClientProfile{
 }
 
 var Opera_90 = ClientProfile{
-	clientHelloId: tls.HelloOpera_90,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloOpera_90,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Opera_91 = ClientProfile{
-	clientHelloId: tls.HelloOpera_91,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloOpera_91,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }
 
 var Opera_89 = ClientProfile{
-	clientHelloId: tls.HelloOpera_89,
-	settings: map[http2.SettingID]uint32{
+	ClientHelloId: tls.HelloOpera_89,
+	Settings: map[http2.SettingID]uint32{
 		http2.SettingHeaderTableSize:      65536,
 		http2.SettingMaxConcurrentStreams: 1000,
 		http2.SettingInitialWindowSize:    6291456,
 		http2.SettingMaxHeaderListSize:    262144,
 	},
-	settingsOrder: []http2.SettingID{
+	SettingsOrder: []http2.SettingID{
 		http2.SettingHeaderTableSize,
 		http2.SettingMaxConcurrentStreams,
 		http2.SettingInitialWindowSize,
 		http2.SettingMaxHeaderListSize,
 	},
-	pseudoHeaderOrder: []string{
+	PseudoHeaderOrder: []string{
 		":method",
 		":authority",
 		":scheme",
 		":path",
 	},
-	connectionFlow: 15663105,
+	ConnectionFlow: 15663105,
 }

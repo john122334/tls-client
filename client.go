@@ -15,6 +15,7 @@ import (
 	"github.com/bogdanfinn/tls-client/bandwidth"
 	"github.com/bogdanfinn/tls-client/profiles"
 	"golang.org/x/net/proxy"
+	fhttp "github.com/bogdanfinn/fhttp"
 )
 
 var defaultRedirectFunc = func(req *http.Request, via []*http.Request) error {
@@ -35,7 +36,7 @@ type HttpClient interface {
 	Get(url string) (resp *http.Response, err error)
 	Head(url string) (resp *http.Response, err error)
 	Post(url, contentType string, body io.Reader) (resp *http.Response, err error)
-
+    GetUnderlyingClient() *fhttp.Client
 	GetBandwidthTracker() bandwidth.BandwidthTracker
 }
 
